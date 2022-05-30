@@ -7,5 +7,6 @@ CMD ["npm", "run", "build"]
 
 # /app/build <-- all the stuff we want in the container
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 
