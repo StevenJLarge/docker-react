@@ -5,7 +5,7 @@ WORKDIR '/app'
 COPY package.json .
 RUN npm install
 COPY . .
-CMD ["npm", "run", "build"]
+CMD npm run build
 
 # /app/build <-- all the stuff we want in the container
 FROM nginx
